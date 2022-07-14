@@ -39,7 +39,8 @@ document.querySelectorAll("button.art").forEach(button => {
     const index = src.indexOf('.png');
     const fullSrc = src.slice(0, index) + '_full.png';
     
-    modalImage.src = fullSrc;
+    // modalImage.src = fullSrc;
+    modalImage.src = src;
     modal.style.display = "block";
   }
 });

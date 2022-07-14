@@ -69,8 +69,8 @@ menu a {
 
 section.about div.container {
   padding-bottom: 50px;
-  background-image: url("./background-mock.png");
-  background-size: auto;
+  background-image: url("./images/portraits/Sense-of-apathy.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -146,11 +146,30 @@ section.war button {
   margin-right: 30px;
 }
 section.war p {
+  display: inline-block;
   white-space: wrap;
+  margin-top: 200px;
+  max-width: 480px;
 }
 
 section.book {
   background-color: #c0c0c0;
+}
+section.book div.container {
+  background-image: url("./images/book.png");
+  background-size: auto 135%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 800px;
+}
+section.book h2 {
+  text-align: center;
+  font-size: 30px;
+}
+section.book a {
+  position: relative;
+  top: 500px;
+  left: calc(50% - 20px);
 }
 
 section.interior {
@@ -161,6 +180,7 @@ section.interior div.row-of-three button {
 }
 section.interior div.column-of-two {
   flex-grow: 7;
+  flex-shrink: 30;
 }
 
 footer {
@@ -205,20 +225,26 @@ div.modal {
   background-color: rgba(192, 192, 192, 0.2509803922);
 }
 div.modal div {
-  margin: 100px auto;
+  margin: 20px auto 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 div.modal button {
+  margin-top: 10px;
   display: block;
   width: 100%;
   background-color: #2d2d2d;
   border-radius: 0;
   border-width: 0;
-  height: 40px;
+  height: 50px;
   color: #bfbfbf;
   text-align: center;
+  text-transform: uppercase;
+}
+div.modal img {
+  max-height: calc(100vh - 100px);
+  max-width: 100vh;
 }
 
 button.up {
