@@ -1,8 +1,22 @@
+@font-face {
+  font-family: "Antro Vectra";
+  src: url("./fonts/AntroVectra/AntroVectra.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Antro Vectra";
+  src: url("./fonts/AntroVectra/AntroVectra-Bolder.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
 body {
   background-color: #c1c1c1;
   margin: auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 25px;
+  font-weight: 300;
+  word-spacing: 70%;
 }
 
 h2 {
@@ -37,11 +51,16 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 20px;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
-header img.logo-image {
+header div.logo {
   margin: 0 auto;
   width: 400px;
+  font-family: "Antro Vectra";
+  font-size: 3em;
+  text-align: center;
+  word-spacing: 70%;
 }
 
 menu {
@@ -98,9 +117,6 @@ div.row-of-three {
   justify-content: center;
   flex-direction: row;
 }
-div.row-of-three button {
-  flex-basis: 28%;
-}
 
 div.row-of-two {
   width: 100%;
@@ -108,9 +124,6 @@ div.row-of-two {
   flex-wrap: nowrap;
   justify-content: center;
   flex-direction: row;
-}
-div.row-of-two button {
-  flex-basis: 40%;
 }
 
 div.column-of-two {
@@ -175,34 +188,34 @@ section.book a {
 section.interior {
   background-color: #c0c0c0;
 }
-section.interior div.row-of-three button {
-  flex-grow: 18;
-}
-section.interior div.column-of-two {
-  flex-grow: 7;
-  flex-shrink: 30;
-}
-
 footer {
   background-color: #c0c0c0;
   padding-top: 50px;
 }
-footer div {
+footer div.container {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
-footer img.logo-image {
-  width: 500px;
+footer div.logo {
+  margin: 0 auto;
+  width: 400px;
+  font-family: "Antro Vectra";
+  font-size: 3.3em;
+  text-align: center;
+  margin-bottom: 7px;
 }
 footer p {
   text-align: center;
-  margin-top: -30px;
-  font-size: 25px;
+  font-size: 18px;
 }
 footer div.icon {
   padding: 30px 0;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 button.art {

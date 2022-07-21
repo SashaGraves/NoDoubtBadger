@@ -1,8 +1,33 @@
+@font-face {
+  font-family: 'Antro Vectra';
+  src: url('./fonts/AntroVectra/AntroVectra.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Antro Vectra';
+  src: url('./fonts/AntroVectra/AntroVectra-Bolder.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$humanableWhite: #c0c0c0;
+$humanableWhiteTransparent: #c0c0c040;
+$creamyWhite: #c1c1c1;
+$borderGray: #414141;
+$darkGray: #2d2d2d;
+$humanableBlack: #16120f;
+$borderLightGray: #585656;
+$shadowGrey: rgba(67, 73, 71, 0.4);
+
 body {
-  background-color:#c1c1c1;
+  background-color: $c1c1c1;
   margin: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 25px;
+  font-weight: 300;
+  word-spacing: 70%;
 }
 
 h2 {
@@ -23,13 +48,14 @@ div.border {
   margin: 20px 0 30px;
   height: 10px;
   width: 150px;
-  border-bottom: 3px solid #414141;
+  border-bottom: 3px solid $borderGray;
 }
 
 div.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 35px 40px;
+  
 }
 
 header {
@@ -37,11 +63,17 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 20px;
   
-  img.logo-image {
+  padding-top: 60px;
+  padding-bottom: 20px ;
+  
+  div.logo {
     margin: 0 auto;
     width: 400px;
+    font-family: 'Antro Vectra';
+    font-size: 3em;
+    text-align: center;
+    word-spacing: 70%;
   }
 }
 
@@ -58,7 +90,7 @@ menu {
   flex-wrap: wrap;
   
   a {
-    background-color: #2d2d2d;
+    background-color: $darkGray;
     opacity: 86%;
     border-radius: 0;
     border-width: 0;
@@ -81,7 +113,7 @@ section.about {
   }
   
   p {
-    color:#414141;
+    color:$borderGray;
     width: 50%;
   }
   
@@ -112,10 +144,6 @@ div.row-of-three {
   flex-wrap: nowrap;
   justify-content: center;
   flex-direction: row;
-
-  button {
-    flex-basis: 28%; 
-  }
 }
 
 div.row-of-two {
@@ -125,9 +153,9 @@ div.row-of-two {
   justify-content: center;
   flex-direction: row;
 
-  button {
-    flex-basis: 40%;
-  }
+  // button {
+  //   flex-basis: 40%;
+  // }
 }
 
 div.column-of-two {
@@ -140,7 +168,7 @@ div.column-of-two {
 // section 2
 
 section.portraits {
-  background-color: #2d2d2d;
+  background-color: $darkGray;
   
   img.title {
     float: right;
@@ -149,7 +177,7 @@ section.portraits {
 }
 
 section.war {
-  background-color: #16120f;
+  background-color: $humanableBlack;
   
   div.container {
     color: #bfbfbf;
@@ -161,7 +189,7 @@ section.war {
   }
   
   div.border {
-    border-color: #585656;
+    border-color: $borderLightGray;
   }
   
   button {
@@ -177,7 +205,7 @@ section.war {
 }
 
 section.book {
-  background-color: #c0c0c0;
+  background-color: $humanableWhite;
   
   div.container {
     background-image: url('./images/book.png');
@@ -200,40 +228,40 @@ section.book {
 }
 
 section.interior {
-  background-color: #c0c0c0;
-  
-  div.row-of-three {
-    
-    button {
-      flex-grow: 18;
-    }
-  }
-  
-  div.column-of-two {
-    flex-grow: 7;
-    flex-shrink: 30;
-  }
+  background-color: $humanableWhite;
+
 }
 
 
 footer {
-  background-color: #c0c0c0;
+  background-color: $humanableWhite;
   padding-top: 50px;
-  & div {
+  
+  div.container {
     width: fit-content;
     margin: 0 auto;
   }
-  img.logo-image {
-    width: 500px;
+  
+  div.logo {
+    margin: 0 auto;
+    width: 400px;
+    font-family: 'Antro Vectra';
+    font-size: 3.3em;
+    text-align: center;
+    margin-bottom: 7px;
   }
+  
   p {
     text-align: center;
-    margin-top: -30px;
-    font-size: 25px;
+    font-size: 18px;
   }
   
   div.icon {
-    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 400px;
   }
 }
 
@@ -242,7 +270,7 @@ button.art {
   
   &:hover {
     cursor: zoom-in;
-    box-shadow: 0px 15px 20px rgba(67, 73, 71, 0.4);
+    box-shadow: 0px 15px 20px $shadowGrey;
     transform: translateY(-3px);
   }
 }
@@ -255,7 +283,7 @@ div.modal {
   top: 0;
   width: 100%; 
   height: 100%;
-  background-color: #c0c0c040;
+  background-color: $humanableWhiteTransparent;
 
   div {
     margin: 20px auto 0;
@@ -266,7 +294,7 @@ div.modal {
     margin-top: 10px;
     display: block;
     width: 100%;
-    background-color: #2d2d2d;
+    background-color: $darkGray;
     border-radius: 0;
     border-width: 0;
     height: 50px;
