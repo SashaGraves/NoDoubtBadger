@@ -4,9 +4,11 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" media="all" href="./styles/index.css" />
+    <!-- <link rel="stylesheet" media="screen and (max-width: 786px)" href="tablet.css"> -->
+    <!-- <link rel="stylesheet" media="screen and (max-width: 380px)" href="mobile.css"> -->
     <title>No Doubt Badger</title>
   </head>
 
@@ -48,22 +50,27 @@
 
     <section class="portraits" id="portraits">
       <div class="container">
-        <img class="title" src="series-2022-mock.png" alt="series 2022" />
+        <div class="title">series 2022</div>
         <div class="row-of-three gallery">
-          <button class="art"><img src="./images/portraits/Ana.png" /></button>
-          <button class="art"><img src="./images/portraits/Sense-of-dignity.png" /></button>
-          <button class="art"><img src="./images/portraits/Sense-of-fear.jpg" /></button>
+          <button class="art"><img src="./images/portraits/Ana.png"
+              data-src="./images/portraits/Ana_full.png" /></button>
+          <button class="art"><img src="./images/portraits/Sense-of-dignity.png"
+              data-src="./images/portraits/Sense-of-dignity_full.png" /></button>
+          <button class="art"><img src="./images/portraits/Sense-of-fear.jpg"
+              data-src="./images/portraits/Sense-of-fear_full.jpg" /></button>
         </div>
         <div class="row-of-two gallery">
-          <button class="art"><img src="./images/portraits/Sense-of-greed.jpg" /></button>
-          <button class="art"><img src="./images/portraits/Khati.png" /></button>
+          <button class="art"><img src="./images/portraits/Sense-of-greed.jpg"
+              data-src="./images/portraits/Sense-of-greed_full.jpg" /></button>
+          <button class="art"><img src="./images/portraits/Khati.png"
+              data-src="./images/portraits/Khati_full.png" /></button>
         </div>
       </div>
     </section>
 
     <section class="war" id="war">
       <div class="container">
-        <button class="art"><img src="gallery-sample.png" /></button>
+        <button class="art"><img src="gallery-sample.png" data-src="gallery-sample_full.png" /></button>
         <div>
           <h2>There is a war</h2>
           <div class="border"></div>
@@ -80,14 +87,20 @@
       <div class="container">
 
         <div class="row-of-three gallery">
-          <button class="art"><img src="./images/charactr-concept/Mira.png" /></button>
-          <button class="art"><img src="./images/charactr-concept/Sheep.png" /></button>
-          <button class="art"><img src="./images/charactr-concept/underwter.png" /></button>
+          <button class="art"><img src="./images/charactr-concept/Mira.png"
+              data-src="./images/charactr-concept/Mira-full.png" /></button>
+          <button class="art"><img src="./images/charactr-concept/Sheep.png"
+              data-src="./images/charactr-concept/Sheep_full.png" /></button>
+          <button class="art"><img src="./images/charactr-concept/underwter.png"
+              data-src="./images/charactr-concept/underwter_full.png" /></button>
         </div>
         <div class="row-of-three gallery">
-          <button class="art"><img src="./images/charactr-concept/Oli_.png" /></button>
-          <button class="art"><img src="./images/charactr-concept/Odasto.png" /></button>
-          <button class="art"><img src="./images/charactr-concept/cyberchick.png" /></button>
+          <button class="art"><img src="./images/charactr-concept/Oli_.png"
+              data-src="./images/charactr-concept/Oli__full.png" /></button>
+          <button class="art"><img src="./images/charactr-concept/Odasto.png"
+              data-src="./images/charactr-concept/Odasto_full.png" /></button>
+          <button class="art"><img src="./images/charactr-concept/cyberchick.png"
+              data-src="./images/charactr-concept/cyberchick_full.png" /></button>
         </div>
       </div>
     </section>
@@ -95,6 +108,7 @@
     <section class="book" id="book">
       <div class="container">
         <h2>the Knight in the Panther Skin</h2>
+        <p>book covers design</p>
         <a>order now</a>
       </div>
     </section>
@@ -103,16 +117,16 @@
       <div class="container">
         <div class="row-of-three gallery">
           <div class="column-of-two gallery">
-            <button class="art"><img src="./images/interior/1.png" /></button>
-            <button class="art"><img src="./images/interior/2.png" /></button>
+            <button class="art"><img src="./images/interior/1.png" data-src="./images/interior/1_full.png" /></button>
+            <button class="art"><img src="./images/interior/2.png" data-src="./images/interior/2_full.png" /></button>
           </div>
-          <button class="art"><img src="./images/interior/3.png" /></button>
-          <button class="art"><img src="./images/interior/4.png" /></button>
+          <button class="art"><img src="./images/interior/3.png" data-src="./images/interior/3_full.png" /></button>
+          <button class="art"><img src="./images/interior/4.png" data-src="./images/interior/4_full.png" /></button>
         </div>
         <div class="row-of-three gallery">
-          <button class="art"><img src="./images/interior/6.png" /></button>
-          <button class="art"><img src="./images/interior/5.png" /></button>
-          <button class="art"><img src="./images/interior/7.png" /></button>
+          <button class="art"><img src="./images/interior/6.png" data-src="./images/interior/6_full.png" /></button>
+          <button class="art"><img src="./images/interior/5.png" data-src="./images/interior/5_full.png" /></button>
+          <button class="art"><img src="./images/interior/7.png" data-src="./images/interior/7_full.png" /></button>
         </div>
       </div>
     </section>
@@ -122,14 +136,16 @@
         <div class="logo">no doubt badger</div>
         <p><a>nodoubtbadger@gmail.com</a></p>
         <div class="icon">
-          <a href=""><img src="facebook_icon.svg" /></a>
-          <a href=""><img src="twitter_icon.svg" /></a>
-          <a href=""><img src="instagram_icon.svg" /></a>
+          <a href=""><img src="./svgs/facebook_icon.svg" /></a>
+          <a href=""><img src="./svgs/twitter_icon.svg" /></a>
+          <a href=""><img src="./svgs/instagram_icon.svg" /></a>
+          <a href=""><img src="./svgs/dark-linkedin.svg" /></a>
+          <a href=""><img src="./svgs/behance.svg" /></a>
         </div>
       </div>
     </footer>
 
-    <button class="up"><img src="up-icon.svg" height="40" width="40" /></button>
+    <button class="up"><img src="./svgs/up-icon.svg" /></button>
 
     <div class="modal">
       <div>

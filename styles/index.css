@@ -1,18 +1,17 @@
 @font-face {
   font-family: "Antro Vectra";
-  src: url("./fonts/AntroVectra/AntroVectra.woff") format("woff");
+  src: url("../fonts/AntroVectra/AntroVectra.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Antro Vectra";
-  src: url("./fonts/AntroVectra/AntroVectra-Bolder.woff") format("woff");
+  src: url("../fonts/AntroVectra/AntroVectra-Bolder.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 body {
   background-color: #c1c1c1;
-  margin: auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 25px;
   font-weight: 300;
@@ -88,7 +87,7 @@ menu a {
 
 section.about div.container {
   padding-bottom: 50px;
-  background-image: url("./images/portraits/Sense-of-apathy.jpg");
+  background-image: url("../images/Sense-of-apathy.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -136,9 +135,13 @@ div.column-of-two {
 section.portraits {
   background-color: #2d2d2d;
 }
-section.portraits img.title {
+section.portraits div.title {
   float: right;
   padding: 30px 0;
+  font-family: "Antro Vectra";
+  color: #585656;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 section.war {
@@ -148,15 +151,20 @@ section.war div.container {
   color: #bfbfbf;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   width: 70%;
   max-width: 900px;
+  flex-wrap: wrap;
+}
+section.war div.container > * {
+  margin: 15px;
 }
 section.war div.border {
   border-color: #585656;
 }
 section.war button {
-  margin-right: 30px;
+  margin: 0 15px;
 }
 section.war p {
   display: inline-block;
@@ -169,25 +177,40 @@ section.book {
   background-color: #c0c0c0;
 }
 section.book div.container {
-  background-image: url("./images/book.png");
+  background-image: url("../images/book.png");
   background-size: auto 135%;
   background-repeat: no-repeat;
   background-position: center center;
   height: 800px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 section.book h2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 4em;
+  font-family: "Antro Vectra";
+  text-transform: none;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1em;
+}
+section.book p {
+  font-size: 2em;
+  text-align: center;
 }
 section.book a {
-  position: relative;
-  top: 500px;
-  left: calc(50% - 20px);
+  margin-top: auto;
+  font-weight: 600;
+  font-size: 2em;
 }
 
 section.interior {
   background-color: #c0c0c0;
 }
+
 footer {
   background-color: #c0c0c0;
   padding-top: 50px;
@@ -211,11 +234,15 @@ footer p {
   font-size: 18px;
 }
 footer div.icon {
-  padding: 30px 0;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   margin: 0 auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 300px;
+}
+footer a {
+  height: 30px;
 }
 
 button.art {
@@ -242,6 +269,7 @@ div.modal div {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 100%;
 }
 div.modal button {
   margin-top: 10px;
@@ -257,7 +285,7 @@ div.modal button {
 }
 div.modal img {
   max-height: calc(100vh - 100px);
-  max-width: 100vh;
+  max-width: 100vw;
 }
 
 button.up {
@@ -266,4 +294,6 @@ button.up {
   bottom: 50px;
   background-color: transparent;
   border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }/*# sourceMappingURL=index.css.map */

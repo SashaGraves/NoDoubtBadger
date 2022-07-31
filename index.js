@@ -17,30 +17,33 @@ upButton.onclick = function (e) {
   });
 }
 
-const modal = document.querySelector("div.modal")
-const modalImage = modal.querySelector("img")
-const modalButton = modal.querySelector("button")
+// const mediaQueryLarge = window.matchMedia('(min-width: 800px)')
 
-modalButton.onclick = function() {
-  modal.style.display = "none";
-}
+// if (mediaQueryLarge) {
+ // for large screens - use modal
+  const modal = document.querySelector("div.modal")
+  const modalImage = modal.querySelector("img")
+  const modalButton = modal.querySelector("button")
 
-window.onclick = function(event) {
-  if (event.target == modal) {
+  modalButton.onclick = function() {
     modal.style.display = "none";
   }
-} 
 
-document.querySelectorAll("button.art").forEach(button => {
-  button.onclick = function (e) {
-    e.preventDefault();
-    const img = button.querySelector('img');
-    const src = img.src;
-    const index = src.indexOf('.png');
-    const fullSrc = src.slice(0, index) + '_full.png';
-    
-    modalImage.src = fullSrc;
-    modal.style.display = "block";
-  }
-});
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modalImage.src = "";
+      modal.style.display = "none";
+    }
+  } 
 
+  document.querySelectorAll("button.art").forEach(button => {
+    button.onclick = function (e) {
+      e.preventDefault();
+      const img = button.querySelector('img');
+      const src = img.dataset.src;
+      
+      modalImage.src = src;
+      modal.style.display = "block";
+    }
+  });
+// } 
