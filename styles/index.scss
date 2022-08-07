@@ -19,6 +19,7 @@ $borderGray: #414141;
 $darkGray: #2d2d2d;
 $humanableBlack: #16120f;
 $borderLightGray: #585656;
+$borderLightGray86: #58565686;
 $shadowGrey: rgba(67, 73, 71, 0.4);
 
 body {
@@ -345,4 +346,101 @@ button.up {
   border-radius: 50%;
   height: 40px;
   width: 40px;
+}
+
+section.slider-container {
+  background-color: $darkGray;
+  padding: 50px 0;
+  
+  div.container {
+  position: relative;
+  width: 900px;
+  height: 500px;
+  padding: 0;
+  border: 6px solid $borderLightGray86;
+  
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 900px 100%;
+    
+  }
+  .background-img {
+    background-image: url('../images/day.jpg');
+  }
+  .foreground-img {
+    background-image: url('../images/night.jpg');
+    width: 50%;
+  }
+  
+  .slider {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    margin: 0;
+    transition: all .1s;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 6px;
+      height: calc(500px - 2px);
+      background: $borderLightGray86;
+      cursor: pointer;
+      border-color: transparent;
+      border-radius: 0;
+    }
+    &::-moz-range-thumb {
+      width: 6px;
+      height: calc(500px - 2px);
+      border-color: transparent;
+      border-radius: 0;
+    
+      background: $borderLightGray86;
+      cursor: pointer;
+    }
+  }
+  
+  .slider-button {
+    $size: 30px;
+    pointer-events: none;
+    position: absolute;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: $borderLightGray;
+    left: calc(50% - 19px);
+    top: calc(50% - 18px);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @mixin arrow-helper() {
+      content: '';
+      padding: 3px;
+      display: inline-block;
+      border: solid $creamyWhite;
+      border-width: 0 2px 2px 0;
+    }
+    &:after {
+      @include arrow-helper();
+      transform: rotate(-45deg);
+    }
+    &:before {
+      @include arrow-helper();
+      transform: rotate(135deg);
+    }
+  }
+}
 }

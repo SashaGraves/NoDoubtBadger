@@ -17,10 +17,6 @@ upButton.onclick = function (e) {
   });
 }
 
-// const mediaQueryLarge = window.matchMedia('(min-width: 800px)')
-
-// if (mediaQueryLarge) {
- // for large screens - use modal
   const modal = document.querySelector("div.modal")
   const modalImage = modal.querySelector("img")
   const modalButton = modal.querySelector("button")
@@ -46,4 +42,17 @@ upButton.onclick = function (e) {
       modal.style.display = "block";
     }
   });
-// } 
+
+  
+  const slider = document.querySelector("#slider")
+  const foregroundImg = document.querySelector(".foreground-img")
+  const sliderButton = document.querySelector(".slider-button")
+
+  slider.addEventListener("input", (e)=>{
+    const sliderPos = e.target.value;
+    // Update the width of the foreground image
+    foregroundImg.style.width = `${sliderPos}%`
+    // Update the position of the slider button
+    sliderButton.style.left = `calc(${sliderPos}% - 19px)`
+  });
+  
