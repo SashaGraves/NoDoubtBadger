@@ -139,38 +139,9 @@ section.portraits div.title {
   float: right;
   padding: 30px 0;
   font-family: "Antro Vectra";
-  color: #585656;
+  color: #696868;
   font-weight: bold;
   font-size: 1.5em;
-}
-
-section.war {
-  background-color: #16120f;
-}
-section.war div.container {
-  color: #bfbfbf;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 70%;
-  max-width: 900px;
-  flex-wrap: wrap;
-}
-section.war div.container > * {
-  margin: 15px;
-}
-section.war div.border {
-  border-color: #585656;
-}
-section.war button {
-  margin: 0 15px;
-}
-section.war p {
-  display: inline-block;
-  white-space: wrap;
-  margin-top: 200px;
-  max-width: 480px;
 }
 
 section.book {
