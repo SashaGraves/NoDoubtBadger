@@ -20,6 +20,15 @@ upButton.onclick = function (e) {
   });
 }
 
+//  image resize
+
+const SIZE = {
+  390: '390w',
+  800: '800h',
+  980: '980w',
+  1200: '1200h',
+}
+
 // modal
 
 const modal = document.querySelector("div.modal")
@@ -37,35 +46,18 @@ window.onclick = function(event) {
   }
 } 
 
-const ua = navigator.userAgent;
+// images in modal
 
-if( /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua) 
-  || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-     
-    document.querySelectorAll("button.art").forEach(button => {
-      button.onclick = function (e) {
-        e.preventDefault();
-        const img = button.querySelector('img');
-        const src = img.dataset.srcmob;
-        
-        modalImage.src = src;
-        modal.style.display = "flex";
-      }
-    });
-} else {
-  document.querySelectorAll("button.art").forEach(button => {
+document.querySelectorAll("button.art").forEach(button => {
   button.onclick = function (e) {
     e.preventDefault();
     const img = button.querySelector('img');
-    const src = img.dataset.src;
-    
-    modalImage.src = src;
-    modal.style.display = "flex";
+    modalImage.src = getSrc(img.dataset.name, img.dataset.id);
+    modalImage.onload = function (e, em) {
+      modal.style.display = "flex";
+    }
   }
 });
-}
-
-
 
 // slider
   
@@ -81,3 +73,22 @@ slider.addEventListener("input", (e)=>{
   sliderButton.style.left = `calc(${sliderPos}% - 19px)`
 });
   
+
+function getSrc(dataName, dataId) {
+  const ua = navigator.userAgent;
+  
+  const srcEnd = `/${dataId}/${dataName}`
+
+  if( /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua) 
+    || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+      
+      const srcStart = `./images/${SIZE[980]}`
+      return srcStart + srcEnd
+  } else if (window.screen.availHeight > 1250) {
+    const srcStart = `./images/${SIZE[1200]}`
+    return srcStart + srcEnd
+  } else {
+    const srcStart = `./images/${SIZE[800]}`
+    return srcStart + srcEnd
+  }
+}
