@@ -37,13 +37,11 @@ window.onclick = function(event) {
   }
 } 
 
-if( navigator.userAgent.match(/Android/i) ||
-	navigator.userAgent.match(/webOS/i) ||
-	navigator.userAgent.match(/iPhone/i) ||
-	navigator.userAgent.match(/iPod/i)) {
-    
-   
-    
+const ua = navigator.userAgent;
+
+if( /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua) 
+  || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+     
     document.querySelectorAll("button.art").forEach(button => {
       button.onclick = function (e) {
         e.preventDefault();

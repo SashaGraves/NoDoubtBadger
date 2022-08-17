@@ -18,6 +18,7 @@ $creamyWhite: #c1c1c1;
 $borderGray: #414141;
 $darkGray: #2d2d2d;
 $humanableBlack: #16120f;
+$humanableBlackTransparent: #16120fb0;
 $borderLightGray: #585656;
 $borderLightGray86: #58565686;
 $shadowGrey: rgba(67, 73, 71, 0.4);
@@ -55,7 +56,7 @@ div.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 35px 40px;
-  
+  min-width: 900px;
 }
 
 header {
@@ -126,7 +127,7 @@ section.about {
 
 .gallery {
   
-  button {
+  .art {
     background-color: transparent;
     border: none;
     margin: 7px;
@@ -176,41 +177,6 @@ section.portraits {
     font-size: 1.5em;
   }
 }
-
-// section.war {
-//   background-color: $humanableBlack;
-  
-//   div.container {
-//     color: #bfbfbf;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: row;
-//     width: 70%;
-//     max-width: 900px;
-//     flex-wrap: wrap;
-    
-//     &>* {
-//     margin: 15px;
-      
-//     }
-//   }
-  
-//   div.border {
-//     border-color: $borderLightGray;
-//   }
-  
-//   button {
-//     margin: 0 15px;
-//   }
-  
-//   p {
-//     display: inline-block;
-//     white-space: wrap;
-//     margin-top: 200px;
-//     max-width: 480px;
-//   }
-// }
 
 section.book {
   background-color: $humanableWhite;
@@ -311,7 +277,7 @@ div.modal {
   top: 0;
   width: 100%; 
   height: 100%;
-  background-color: $humanableWhiteTransparent;
+  background-color: $humanableBlackTransparent;
 
   div {
     margin: 20px auto 0;
