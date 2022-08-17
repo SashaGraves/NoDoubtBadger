@@ -49,7 +49,7 @@ if( /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)
         const src = img.dataset.srcmob;
         
         modalImage.src = src;
-        modal.style.display = "block";
+        modal.style.display = "flex";
       }
     });
 } else {
@@ -60,7 +60,7 @@ if( /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)
     const src = img.dataset.src;
     
     modalImage.src = src;
-    modal.style.display = "block";
+    modal.style.display = "flex";
   }
 });
 }
