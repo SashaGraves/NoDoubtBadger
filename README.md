@@ -25,7 +25,7 @@ Desktop images are smaller, resize them to 800h.
 Here is img tag.
 
 ```
-<img src="./images/charactr-concept/main/800h/Mira.png"
+  <img src="./images/charactr-concept/main/800h/Mira.png"
   data-srcmob="./images/charactr-concept/full-mobile/Mira_full.png"
   data-src="./images/charactr-concept/full-desktop/Mira_full.png" />
 ```
