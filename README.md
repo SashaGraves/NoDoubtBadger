@@ -24,14 +24,15 @@ Desktop images are smaller, resize them to 800h.
 
 Here is img tag.
 
-```<img src="./images/charactr-concept/main/800h/Mira.png"
+```
+<img src="./images/charactr-concept/main/800h/Mira.png"
   data-srcmob="./images/charactr-concept/full-mobile/Mira_full.png"
   data-src="./images/charactr-concept/full-desktop/Mira_full.png" />
 ```
 
-src - path to use, when show image on page initially,
-data-srcmob - path to use, when show modal image on mobile devices,
-data-src - path to use in modal on desktop.
+- src - path to use, when show image on page initially,
+- data-srcmob - path to use, when show modal image on mobile devices,
+- data-src - path to use in modal on desktop.
 
 
 # Note
