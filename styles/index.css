@@ -46,6 +46,12 @@ div.container {
   min-width: 900px;
 }
 
+div.logo {
+  margin: 0 auto;
+  font-family: "Antro Vectra";
+  text-align: center;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -55,11 +61,8 @@ header {
   padding-bottom: 20px;
 }
 header div.logo {
-  margin: 0 auto;
   width: 400px;
-  font-family: "Antro Vectra";
   font-size: 3em;
-  text-align: center;
   word-spacing: 70%;
 }
 
@@ -194,11 +197,8 @@ footer div.container {
   margin: 0 auto;
 }
 footer div.logo {
-  margin: 0 auto;
   width: 400px;
-  font-family: "Antro Vectra";
   font-size: 3.3em;
-  text-align: center;
   margin-bottom: 7px;
 }
 footer p {
@@ -244,6 +244,135 @@ div.modal div {
   width: -moz-fit-content;
   width: fit-content;
   max-width: 100%;
+}
+div.modal .modal-content {
+  display: none;
+}
+div.modal .modal-loader {
+  display: block;
+  color: #c0c0c0;
+  width: 400px;
+}
+div.modal .modal-loader div.logo {
+  margin: 0 0;
+}
+div.modal .modal-loader div.logo::after {
+  content: "";
+  height: 20px;
+  font-size: 3.3em;
+  -webkit-animation-name: noDoubtBadger;
+          animation-name: noDoubtBadger;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  text-align: left;
+}
+@-webkit-keyframes noDoubtBadger {
+  0% {
+    content: " ";
+  }
+  10% {
+    content: "n";
+  }
+  14% {
+    content: "no";
+  }
+  18% {
+    content: "no ";
+  }
+  21% {
+    content: "no d";
+  }
+  28% {
+    content: "no do";
+  }
+  35% {
+    content: "no dou";
+  }
+  42% {
+    content: "no doub";
+  }
+  49% {
+    content: "no doubt";
+  }
+  56% {
+    content: "no doubt ";
+  }
+  63% {
+    content: "no doubt b";
+  }
+  70% {
+    content: "no doubt ba";
+  }
+  77% {
+    content: "no doubt bad";
+  }
+  82% {
+    content: "no doubt badg";
+  }
+  89% {
+    content: "no doubt badge";
+  }
+  96% {
+    content: "no doubt badger";
+  }
+  100% {
+    content: "no doubt badger";
+  }
+}
+@keyframes noDoubtBadger {
+  0% {
+    content: " ";
+  }
+  10% {
+    content: "n";
+  }
+  14% {
+    content: "no";
+  }
+  18% {
+    content: "no ";
+  }
+  21% {
+    content: "no d";
+  }
+  28% {
+    content: "no do";
+  }
+  35% {
+    content: "no dou";
+  }
+  42% {
+    content: "no doub";
+  }
+  49% {
+    content: "no doubt";
+  }
+  56% {
+    content: "no doubt ";
+  }
+  63% {
+    content: "no doubt b";
+  }
+  70% {
+    content: "no doubt ba";
+  }
+  77% {
+    content: "no doubt bad";
+  }
+  82% {
+    content: "no doubt badg";
+  }
+  89% {
+    content: "no doubt badge";
+  }
+  96% {
+    content: "no doubt badger";
+  }
+  100% {
+    content: "no doubt badger";
+  }
 }
 div.modal button {
   margin-top: 10px;

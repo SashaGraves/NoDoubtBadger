@@ -20,6 +20,7 @@ upButton.onclick = function (e) {
   });
 }
 
+// ------ MODAL -------
 //  image resize
 
 const SIZE = {
@@ -32,18 +33,26 @@ const SIZE = {
 // modal
 
 const modal = document.querySelector("div.modal")
-const modalImage = modal.querySelector("img")
-const modalButton = modal.querySelector("button")
+const modalContent = document.querySelector("div.modal-content")
+const modalLoader = document.querySelector("div.modal-loader")
+const modalImage = modalContent.querySelector("img")
+const modalButton = modalContent.querySelector("button")
 
 modalButton.onclick = function() {
-  modal.style.display = "none";
-}
+  closeModal();
+};
 
 window.onclick = function(event) {
   if (event.target == modal) {
-    modalImage.src = "";
-    modal.style.display = "none";
+    closeModal();
   }
+} ;
+
+function closeModal() {
+  modalImage.src = "";
+  modal.style.display = "none";
+  modalLoader.style.display = "block";
+  modalContent.style.display = "none";
 } 
 
 // images in modal
@@ -53,12 +62,16 @@ document.querySelectorAll("button.art").forEach(button => {
     e.preventDefault();
     const img = button.querySelector('img');
     modalImage.src = getSrc(img.dataset.name, img.dataset.id);
+    modal.style.display = "flex";
     modalImage.onload = function (e, em) {
-      modal.style.display = "flex";
+        
+      modalLoader.style.display = "none";
+      modalContent.style.display = "block";
     }
   }
 });
 
+// ------ SLIDER ----
 // slider
   
 const slider = document.querySelector("#slider")

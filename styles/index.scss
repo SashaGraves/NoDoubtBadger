@@ -12,6 +12,36 @@
   font-style: normal;
 }
 
+// @mixin key_frame($name, $duration, $count) {
+@mixin key_frame() {
+  @keyframes noDoubtBadger {
+    0%   {content: ' ';}
+    10%   {content: 'n';}
+    14%   {content: 'no';}
+    18%   {content: 'no ';}
+    21%   {content: 'no d';}
+    28%   {content: 'no do';}
+    35%   {content: 'no dou';}
+    42%   {content: 'no doub';}
+    49%   {content: 'no doubt';}
+    56%   {content: 'no doubt ';}
+    63%   {content: 'no doubt b';}
+    70%   {content: 'no doubt ba';}
+    77%   {content: 'no doubt bad';}
+    82%   {content: 'no doubt badg';}
+    89%   {content: 'no doubt badge';}
+    96%   {content: 'no doubt badger';}
+    100%   {content: 'no doubt badger';}
+  }
+
+  animation-name: noDoubtBadger;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+
+
+
 $humanableWhite: #c0c0c0;
 $humanableWhiteTransparent: #c0c0c040;
 $creamyWhite: #c1c1c1;
@@ -59,6 +89,12 @@ div.container {
   min-width: 900px;
 }
 
+div.logo {
+  margin: 0 auto;
+  font-family: 'Antro Vectra';
+  text-align: center;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -69,11 +105,8 @@ header {
   padding-bottom: 20px ;
   
   div.logo {
-    margin: 0 auto;
     width: 400px;
-    font-family: 'Antro Vectra';
     font-size: 3em;
-    text-align: center;
     word-spacing: 70%;
   }
 }
@@ -232,11 +265,8 @@ footer {
   }
   
   div.logo {
-    margin: 0 auto;
     width: 400px;
-    font-family: 'Antro Vectra';
     font-size: 3.3em;
-    text-align: center;
     margin-bottom: 7px;
   }
   
@@ -283,9 +313,32 @@ div.modal {
   align-items: center;
   
   div {
-    // margin: auto auto;
     width: fit-content;
     max-width: 100%;
+  }
+  
+  .modal-content {
+    display: none;
+  }
+
+  .modal-loader {
+    display: block;
+    color: $humanableWhite;
+    width: 400px;
+    
+    div.logo {
+      margin: 0 0;
+      
+      &::after {
+      content: "";
+      height: 20px;
+      font-size: 3.3em;
+      @include key_frame();
+      text-align: left;
+      }
+    }
+    
+    
   }
   
   button {
